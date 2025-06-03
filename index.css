@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue-dark: #0a2463;
+  --blue-medium: #1e40af;
+  --blue-light: #3b82f6;
+  --orange: #f97316;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f5f7fa;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+}
+
+/* Smooth transitions */
+button, a, input {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Form input animation */
+input:focus {
+  transform: translateY(-1px);
+}
+
+/* Page transition animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main {
+  animation: fadeIn 0.4s ease-out;
+}
